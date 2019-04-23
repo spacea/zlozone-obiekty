@@ -38,37 +38,35 @@ ma4 <- cbind(ma1, ma3)
 ma4
 
 #Zadanie 6
-ra1 <- data.frame(data = c(as.Date("2019-04-13"), as.Date("2019-04-14"), 
-                           as.Date("2019-04-15")),
-                  miasto = c("Poznan", "Poznan", "Poznan"),
-                  stringsAsFactors = FALSE)
+ra1 <- data.frame(data = c(Sys.Date(), Sys.Date()-1, Sys.Date()-2),
+                  miasto = c("Poznań"))
+                  
 ra1
 
 #Zadanie 7
 ra2 <- data.frame(tmin = c("5.3", "4.6", "2.9"),
-                  tmax = c("11.1", "14.6", "9"),
-                  stringsAsFactors = TRUE)
+                  tmax = c("11.1", "14.6", "9"))
+                
 ra2
 
 #Zadanie 8
 ra3 <- cbind(ra1, ra2)
 ra3
 
-ra3 <- data.frame(data = c(as.Date("2019-04-13"), as.Date("2019-04-14"), 
-                           as.Date("2019-04-15")),
-                  miasto = c("Poznan", "Poznan", "Poznan"),
+ra4 <- data.frame(data = c(Sys.Date(), Sys.Date()-1, Sys.Date()-2),
+                  miasto = c("Poznań"),
                   tmin = c("5.3", "4.6", "2.9"),
                   tmax = c("11.1", "14.6", "9"),
-                  tmean = c(8.2, 9.6, 5.95),
-                  stringsAsFactors = TRUE)
-
+                  tmean = c(((5.3+11.1)/2), ((4.6+14.6)/2), ((2.9+9)/2)))
+                 
+ra4
 #Zadanie 9
-colnames(ra3) <- c("data","miasto","tmin","tmaks","tsr")
-ra3
+colnames(ra4) <- c("data","miasto","tmin","tmaks","tsr")
+ra4
 #mam nadzieje, ze chodzilo o 2 i 3 kolumne z wartosciami liczbowymi
 
-#Zadanie 10 Tutaj wr?cilem do niezmienionych nazw kolumn
-subset(ra3, tmean > 8)
+#Zadanie 10 Uzylem zmieniona nazwe kolumny
+subset(ra4, tsr > 8)
 
 #Zadanie 11
 li1 <- list(c(10:0),
@@ -91,4 +89,5 @@ ramka1 <- as.matrix(ra1)
 ramka1
 class(ramka1)
 #Zmienia sie numeracja wierszy (dodawane sa nawiasy kwadratowe), 
-#a wartosci w macierzy zapisywane sa w cudzyslowiu.
+#a wartosci w macierzy zapisywane sa w cudzyslowiu. Co oznacza, że zmieniają się
+#na dane tekstowe.
