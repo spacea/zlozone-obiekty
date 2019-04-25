@@ -88,14 +88,15 @@ tsr = mean(li1[[3]]$tsr)
 tsr
 
 #14
-zamiana = as.matrix(li1)
+ramka1 = data.frame(wek_log = c(TRUE, FALSE, FALSE),
+                    wek_cal = c(5L, -7L, 12L), 
+                    wek_zmi = c(5.3, -7.1, 1.1), 
+                    wek_zna = c("kot", "pies", "nosorożec"),
+                    stringsAsFactors = FALSE)
+
+zamiana = as.matrix(ramka1)
 zamiana
 
-#Efektem są 3 obiekty określające typ i ilość wcześniejszych obiektów pierwotnej
-#listy li1. Zatem otrzymujemy: obiekt 1 jako obiekt złożony z 11 składowych
-#w rodzaju integer, obiekt 2 jako obiekt złozony z 24 składowych w rodzaju
-#integer, oraz obiekt 3 jako obiekt złożony z 5 składowych w rodzaju listy
-
-
+#Efektem zamiany jest macierz złożona z obiektów klasy tekstowej.
 
 
