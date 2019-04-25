@@ -74,7 +74,7 @@ ramka1 = data.frame(wek_log = c(TRUE, FALSE, FALSE),
                     wek_cal = c(5L, -7L, 12L), 
                     wek_zmi = c(5.3, -7.1, 1.1), 
                     wek_zna = c("kot", "pies", "nosorożec"),
-                    stringsAsFactors = FALSE)
+                    stringsAsFactors = FALSE) 
 as.matrix(ramka1)
 
 #Efektem tego jest zmiana na macierz, a każdy element w wierszu, nawet jeśli
