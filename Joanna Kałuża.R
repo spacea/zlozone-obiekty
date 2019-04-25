@@ -91,7 +91,7 @@ matrix_z_ramka1 = as.matrix(ramka1)
 matrix_z_ramka1
 class(matrix_z_ramka1)
 
-#W efekcie z ramki danych powstała macierz, która składa się z elementów tekstowych( obiekty logiczne i numeryczne zmieniły się na tekstowe), nazwy kolumn pozostały bez zmian.
+#W efekcie z ramki danych powstała macierz, która składa się z elementów tekstowych( obiekty logiczne i numeryczne zmieniły się na tekstowe), nazwy kolumn pozostały bez zmian..
 
 
 
