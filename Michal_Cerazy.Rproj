@@ -1,0 +1,87 @@
+#1#
+ma1 = matrix(0:11, nrow = 3, ncol = 4)
+ma1
+
+ma2 = matrix(2, nrow = 3, ncol = 4)
+ma2
+
+ma3 = matrix(sample(1:3), nrow = 3, ncol = 4)
+ma3
+
+#2#
+ma1 + ma2
+ma1 - ma2
+ma1 * ma2
+ma1 / ma2
+
+ma1 + ma3
+ma1 - ma3
+ma1 * ma3
+ma1 / ma3
+
+#3#
+ma1[c(1,2,3), c(4)]
+ma1[c(1), c(1,2,3,4)]
+
+#4#
+ma3>2
+
+#5#
+ma4 = cbind(ma1, ma3)
+
+#6#
+ra1 = data.frame(data = c("20.04.19", "19.04.19", "18.04.19"),
+                 miasto = c("gorzow_wlkp"))
+ra1
+
+#7#
+ra2 = data.frame(tmin = c(5.3, 4.6, 2.9),
+                 tmax = c(11.1, 14.6, 9))
+ra2
+
+#8#
+ra3 = cbind(ra2, ra1)
+ra3
+ra3[c(1,2,3), c(1,2)]
+wek1 = c(5.3, 11.1)
+wek2 = c(4.6, 14.6)
+wek3 = c(2.9, 9.0)
+
+mean(wek1)
+mean(wek2)
+mean(wek3)
+tmean = data.frame(tmean = c(8.2, 9.6, 5.95))
+
+ra3 = cbind(ra2, tmean, ra1)
+ra3
+
+#9#
+colnames(ra3) = c("tmin", "tmaks", "tsr", "data", "miasto")
+colnames(ra3)
+
+#10#
+if(8.2 > 8){"20.04.19"}
+if(9.6 > 8){"19.04.19"}
+if(5.95 > 8){"18.04.19"}
+
+#11#
+li1 = list(c(10:0),
+           c(ma4),
+           c(ra3))
+li1
+
+#12#
+wektor_1 = li1[[1]]
+wektor_1
+
+#13#
+mean((li1[[3]])$tsr)
+
+#14#
+ramka1 = data.frame(wek_log = c(TRUE, FALSE, FALSE),
+                    wek_cal = c(5L, -7L, 12L), 
+                    wek_zmi = c(5.3, -7.1, 1.1), 
+                    wek_zna = c("kot", "pies", "nosorożec"),
+                    stringsAsFactors = FALSE)
+ramka1 = as.matrix(ramka1)
+class(ramka1)
