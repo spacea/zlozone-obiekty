@@ -78,4 +78,4 @@ ramka1 = data.frame(wek_log = c(TRUE, FALSE, FALSE),
 as.matrix(ramka1)
 
 #Efektem tego jest zmiana na macierz, a każdy element w wierszu, nawet jeśli
-#był numeryczny to przez zmianę jest character.
+#był numeryczny to zmieniony jest na tekstowy.
